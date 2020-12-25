@@ -200,6 +200,7 @@ btnResetCurr.addEventListener('click', function () {
 
 btnNewSudoku.addEventListener('click', function () {
     sudoku = sudokuCore.createBlankCell(sudokuCore.initializeSudoku(), difficulty);
+    prevSudoku = copySudoku(sudoku, difficulty);
     renderGame();
 }, false);
 
