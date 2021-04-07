@@ -4,7 +4,7 @@ const INITAL_DIFFICULTY = .5;
 
 let difficulty = INITAL_DIFFICULTY,
     sudokuCore = new SudokuCore(),
-    sudoku = sudokuCore.createBlankCell(sudokuCore.initializeSudoku(), difficulty),
+    sudoku = sudokuCore.createBlankCell(sudokuCore.renderSudoku(), difficulty),
     prevSudoku = copySudoku(sudoku, difficulty),
     cellPosGroup = [],
     currLevel = 0,
@@ -199,7 +199,7 @@ btnResetCurr.addEventListener('click', function () {
 }, false);
 
 btnNewSudoku.addEventListener('click', function () {
-    sudoku = sudokuCore.createBlankCell(sudokuCore.initializeSudoku(), difficulty);
+    sudoku = sudokuCore.createBlankCell(sudokuCore.renderSudoku(), difficulty);
     prevSudoku = copySudoku(sudoku, difficulty);
     renderGame();
 }, false);
